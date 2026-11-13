@@ -154,12 +154,14 @@ svg.map a:focus{outline:none}
 .tbl th{font-weight:600;font-size:.86rem;color:var(--muted)}
 .tbl td .han{display:block;font-size:.95rem;color:var(--cobalt)}
 .tbl .t{white-space:nowrap;font-variant-numeric:tabular-nums}
-.links{display:flex;gap:.4rem;flex-wrap:wrap}
-.pill{display:inline-block;white-space:nowrap;font-size:.86rem;line-height:1;padding:.45rem .7rem;border:1px solid var(--cobalt);border-radius:999px;text-decoration:none}
-.pill:hover{background:var(--cobalt-soft)}
-button.pill{font:inherit;font-size:.86rem;background:none;color:var(--cobalt);cursor:pointer}
-button.pill.done{background:var(--cobalt-soft)}
-@media (max-width:640px){
+button.cn-copy{display:block;font:inherit;background:none;border:0;padding:.15rem 0 0;margin:0;text-align:left;cursor:pointer;color:var(--cobalt)}
+button.cn-copy .han{display:inline;font-size:1rem;border-bottom:1px dotted currentColor}
+button.cn-copy .cn-hint{display:block;font-family:var(--serif);font-size:.78rem;color:var(--muted);margin-top:.1rem}
+button.cn-copy.done .cn-hint{color:var(--celadon)}
+button.cn-copy:hover .han{border-bottom-style:solid}
+.weblink{white-space:nowrap}
+
+button@media (max-width:640px){
   .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
   .tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .tbl{border-top-width:1px}
@@ -370,39 +372,39 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
     </ol>
 
     <h3>Hotels</h3>
-    <p class="note">Show the Chinese name to drivers. <b>Copy Chinese name</b> copies it so you can paste it into AMap Global, a taxi app or a message to the driver. <b>Apple Maps</b> opens the hotel in Apple Maps on iPhone, iPad or Mac (in a browser on other devices). <b>Website</b> opens the hotel's page.</p>
+    <p class="note">Show the Chinese name to drivers. Tap a Chinese name to copy it, then paste it into <a href="#amap">AMap Global</a> or a taxi app.</p>
     <table class="tbl">
-      <thead><tr><th>Hotel</th><th>Nights</th><th>Address</th><th>Links</th></tr></thead>
+      <thead><tr><th>Hotel</th><th>Nights</th><th>Address</th><th>Hotel page</th></tr></thead>
       <tbody>
         <tr>
-          <td class="lead">Dongyueli Hotel, Shaoxing<span class="han">冬悦里·府山枕水度假酒店</span></td>
+          <td class="lead">Dongyueli Hotel, Shaoxing<button type="button" class="cn-copy" data-copy="冬悦里·府山枕水度假酒店"><span class="han">冬悦里·府山枕水度假酒店</span><span class="cn-hint">Tap to copy</span></button></td>
           <td data-label="Nights" class="t">15-17 Nov (3)</td>
           <td data-label="Address">No. 20 Longshan Back Street, Yuecheng District, Shaoxing<br><span class="nowrap">+86 575 8799 6666</span></td>
-          <td data-label="Links"><span class="links"><a class="pill" href="https://maps.apple.com/?q=%E5%86%AC%E6%82%A6%E9%87%8C%E5%BA%9C%E5%B1%B1%E6%9E%95%E6%B0%B4%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer">Apple Maps<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="pill copy" data-copy="冬悦里·府山枕水度假酒店">Copy Chinese name</button><a class="pill" href="https://uk.trip.com/hotels/shaoxing-hotel-detail-102859697/dongyueli-hotel" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></span></td>
+          <td data-label="Hotel page"><a class="weblink" href="https://uk.trip.com/hotels/shaoxing-hotel-detail-102859697/dongyueli-hotel" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Xihai Hotel, South Wing (mountaintop)<span class="han">黄山西海饭店</span></td>
+          <td class="lead">Xihai Hotel, South Wing (mountaintop)<button type="button" class="cn-copy" data-copy="黄山西海饭店"><span class="han">黄山西海饭店</span><span class="cn-hint">Tap to copy</span></button></td>
           <td data-label="Nights" class="t">18 Nov (1)</td>
           <td data-label="Address">Xihai Scenic Area, Huangshan District, Huangshan, Anhui 242700</td>
-          <td data-label="Links"><span class="links"><a class="pill" href="https://maps.apple.com/?q=%E9%BB%84%E5%B1%B1%E8%A5%BF%E6%B5%B7%E9%A5%AD%E5%BA%97" target="_blank" rel="noopener noreferrer">Apple Maps<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="pill copy" data-copy="黄山西海饭店">Copy Chinese name</button><a class="pill" href="https://za.hotels.com/ho1057516416/xihai-hotel-huangshan-china" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></span></td>
+          <td data-label="Hotel page"><a class="weblink" href="https://za.hotels.com/ho1057516416/xihai-hotel-huangshan-china" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Crowne Plaza Huangshan Yucheng<span class="han">黄山昱城皇冠假日酒店</span></td>
+          <td class="lead">Crowne Plaza Huangshan Yucheng<button type="button" class="cn-copy" data-copy="黄山昱城皇冠假日酒店"><span class="han">黄山昱城皇冠假日酒店</span><span class="cn-hint">Tap to copy</span></button></td>
           <td data-label="Nights" class="t">19 Nov (1)</td>
           <td data-label="Address">No. 1 Huizhou Road, Tunxi, Huangshan, Anhui 245000<br><span class="nowrap">+86 559 259 1888</span></td>
-          <td data-label="Links"><span class="links"><a class="pill" href="https://maps.apple.com/?q=%E9%BB%84%E5%B1%B1%E6%98%B1%E5%9F%8E%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer">Apple Maps<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="pill copy" data-copy="黄山昱城皇冠假日酒店">Copy Chinese name</button><a class="pill" href="https://www.ihg.com/crowneplaza/hotels/us/en/huangshan/txncp/hoteldetail" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></span></td>
+          <td data-label="Hotel page"><a class="weblink" href="https://www.ihg.com/crowneplaza/hotels/us/en/huangshan/txncp/hoteldetail" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Hyatt Place Jingdezhen Taoxichuan<span class="han">景德镇陶溪川凯悦嘉轩酒店</span></td>
+          <td class="lead">Hyatt Place Jingdezhen Taoxichuan<button type="button" class="cn-copy" data-copy="景德镇陶溪川凯悦嘉轩酒店"><span class="han">景德镇陶溪川凯悦嘉轩酒店</span><span class="cn-hint">Tap to copy</span></button></td>
           <td data-label="Nights" class="t">20-23 Nov (4)</td>
           <td data-label="Address">Building 2, Phase II Taoxichuan, Zhushan Avenue &amp; Taoxichuan South Road, Jingdezhen, Jiangxi 333000<br><span class="nowrap">+86 798 873 3666</span></td>
-          <td data-label="Links"><span class="links"><a class="pill" href="https://maps.apple.com/?q=%E6%99%AF%E5%BE%B7%E9%95%87%E9%99%B6%E6%BA%AA%E5%B7%9D%E5%87%AF%E6%82%A6%E5%98%89%E8%BD%A9%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer">Apple Maps<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="pill copy" data-copy="景德镇陶溪川凯悦嘉轩酒店">Copy Chinese name</button><a class="pill" href="https://www.hyatt.com/hyatt-place/en-US/jdzzj-hyatt-place-jingdezhen-taoxichuan" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></span></td>
+          <td data-label="Hotel page"><a class="weblink" href="https://www.hyatt.com/hyatt-place/en-US/jdzzj-hyatt-place-jingdezhen-taoxichuan" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Renaissance Shanghai Yu Garden<span class="han">上海豫园万丽酒店</span></td>
+          <td class="lead">Renaissance Shanghai Yu Garden<button type="button" class="cn-copy" data-copy="上海豫园万丽酒店"><span class="han">上海豫园万丽酒店</span><span class="cn-hint">Tap to copy</span></button></td>
           <td data-label="Nights" class="t">24-25 Nov (2)</td>
           <td data-label="Address">No. 159 Henan South Road, Huangpu District, Shanghai 200010<br><span class="nowrap">+86 21 2321 8888</span></td>
-          <td data-label="Links"><span class="links"><a class="pill" href="https://maps.apple.com/?q=%E4%B8%8A%E6%B5%B7%E8%B1%AB%E5%9B%AD%E4%B8%87%E4%B8%BD%E9%85%92%E5%BA%97" target="_blank" rel="noopener noreferrer">Apple Maps<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="pill copy" data-copy="上海豫园万丽酒店">Copy Chinese name</button><a class="pill" href="https://www.marriott.com/en-us/hotels/shasy-renaissance-shanghai-yu-garden-hotel/overview/" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></span></td>
+          <td data-label="Hotel page"><a class="weblink" href="https://www.marriott.com/en-us/hotels/shasy-renaissance-shanghai-yu-garden-hotel/overview/" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
       </tbody>
     </table>
@@ -414,8 +416,8 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       <tbody>
         <tr><td class="lead">Day 1: Singapore - Shanghai Pudong</td><td data-label="Transport">Flight SQ830</td><td data-label="Departs" class="t">Sun 15, 09:20</td><td data-label="Arrives" class="t">14:35</td><td data-label="Duration" class="t">5 h 15 min</td></tr>
         <tr><td class="lead">Day 1: Pudong Airport - Shaoxing</td><td data-label="Transport">Coach with guide, 220 km</td><td data-label="Departs" class="t">Sun 15, 15:45</td><td data-label="Arrives" class="t">~18:45</td><td data-label="Duration" class="t">~3 h</td></tr>
-        <tr><td class="lead">Day 4: Shaoxing - Hangzhou East Station <span class="han">杭州东站</span></td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Wed 18, TBC</td><td data-label="Arrives" class="t">Before 10:34</td><td data-label="Duration" class="t">~1 h</td></tr>
-        <tr><td class="lead">Day 4: Hangzhou East - Huangshan North <span class="han">黄山北站</span></td><td data-label="Transport">Train G7313, first class</td><td data-label="Departs" class="t">Wed 18, 10:34</td><td data-label="Arrives" class="t">12:02</td><td data-label="Duration" class="t">1 h 28 min</td></tr>
+        <tr><td class="lead">Day 4: Shaoxing - Hangzhou East Station <button type="button" class="cn-copy" data-copy="杭州东站"><span class="han">杭州东站</span><span class="cn-hint">Tap to copy</span></button></td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Wed 18, TBC</td><td data-label="Arrives" class="t">Before 10:34</td><td data-label="Duration" class="t">~1 h</td></tr>
+        <tr><td class="lead">Day 4: Hangzhou East - Huangshan North <button type="button" class="cn-copy" data-copy="黄山北站"><span class="han">黄山北站</span><span class="cn-hint">Tap to copy</span></button></td><td data-label="Transport">Train G7313, first class</td><td data-label="Departs" class="t">Wed 18, 10:34</td><td data-label="Arrives" class="t">12:02</td><td data-label="Duration" class="t">1 h 28 min</td></tr>
         <tr><td class="lead">Day 4: South Gate - Yungu cable car - Xihai Hotel</td><td data-label="Transport">Shuttle bus, cable car, walk</td><td data-label="Departs" class="t">Wed 18, after lunch</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">~2 h 30 min</td></tr>
         <tr><td class="lead">Day 5: Xihai Hotel - Huangshan city</td><td data-label="Transport">Yungu cable car, then coach</td><td data-label="Departs" class="t">Thu 19, TBC</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">TBC</td></tr>
         <tr><td class="lead">Day 6: Hongcun - Jingdezhen</td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Fri 20, TBC</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">~2 h 30 min</td></tr>
@@ -979,11 +981,11 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
 })();
 
 (function(){
-  Array.prototype.forEach.call(document.querySelectorAll("button.copy"), function(btn){
-    var label = btn.textContent;
+  Array.prototype.forEach.call(document.querySelectorAll("button.cn-copy"), function(btn){
+    var hint = btn.querySelector(".cn-hint"); var label = hint.textContent;
     btn.addEventListener("click", function(){
       var text = btn.getAttribute("data-copy");
-      function done(){ btn.textContent = "Copied"; btn.classList.add("done"); setTimeout(function(){ btn.textContent = label; btn.classList.remove("done"); }, 1800); }
+      function done(){ hint.textContent = "Copied"; btn.classList.add("done"); setTimeout(function(){ hint.textContent = label; btn.classList.remove("done"); }, 1800); }
       function fallback(){
         var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "absolute"; ta.style.left = "-9999px";
         document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); done(); } catch (e) { window.prompt("Copy this name:", text); } document.body.removeChild(ta);
