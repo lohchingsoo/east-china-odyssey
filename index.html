@@ -997,5 +997,44 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
   });
 })();
 </script>
+<script>
+/* If a browser keeps the old page width after the device is turned, reload once and return to the same place. */
+(function () {
+  var KEY = "eco2026-place";
+  try {
+    var saved = sessionStorage.getItem(KEY);
+    if (saved) {
+      sessionStorage.removeItem(KEY);
+      window.addEventListener("load", function () {
+        var el = document.getElementById(saved);
+        if (el) el.scrollIntoView({ behavior: "instant", block: "start" });
+      });
+    }
+  } catch (e) {}
+  function currentPlace() {
+    var marks = document.querySelectorAll("main [id]");
+    var best = null;
+    for (var i = 0; i < marks.length; i++) {
+      if (marks[i].getBoundingClientRect().top <= 90) best = marks[i].id;
+    }
+    return best;
+  }
+  function wrongWidth() {
+    var vv = window.visualViewport;
+    var seen = vv ? vv.width * (vv.scale || 1) : window.innerWidth;
+    return Math.abs(seen - document.documentElement.clientWidth) > 40;
+  }
+  window.addEventListener("orientationchange", function () {
+    setTimeout(function () {
+      if (!wrongWidth()) return;
+      try {
+        var place = currentPlace();
+        if (place) sessionStorage.setItem(KEY, place);
+      } catch (e) {}
+      location.reload();
+    }, 600);
+  });
+})();
+</script>
 </body>
 </html>
