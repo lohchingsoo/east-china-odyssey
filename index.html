@@ -997,5 +997,21 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
   });
 })();
 </script>
+<script>
+/* Ask the browser to redraw at the new width after the device is turned (works around a Chrome on iPad fault). */
+(function () {
+  var m = document.querySelector('meta[name="viewport"]');
+  if (!m) return;
+  var base = m.getAttribute("content");
+  function refit() {
+    m.setAttribute("content", base + ", maximum-scale=1");
+    setTimeout(function () { m.setAttribute("content", base); }, 400);
+  }
+  window.addEventListener("orientationchange", refit);
+  if (screen.orientation && screen.orientation.addEventListener) {
+    screen.orientation.addEventListener("change", refit);
+  }
+})();
+</script>
 </body>
 </html>
