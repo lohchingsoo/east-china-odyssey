@@ -57,6 +57,9 @@ img,svg{max-width:100%}
 nav.top{background:var(--paper);background:color-mix(in srgb,var(--paper) 92%,transparent);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 nav.top .inner{max-width:66rem;margin:0 auto;display:flex;align-items:center;gap:1.25rem;padding:.65rem 1.25rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 nav.top .inner::-webkit-scrollbar{display:none}
+@media (max-width:1024px){nav.top .inner{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:2.5rem}}
+img,svg,table,pre{max-width:100%}
+.refs a,.refs li{overflow-wrap:anywhere}
 nav.top .mark{font-family:var(--han);color:var(--seal);font-weight:700;font-size:1.05rem;text-decoration:none;border:1.5px solid var(--seal);padding:0 .3rem;line-height:1.5;flex:none}
 nav.top a.nl{color:var(--ink);text-decoration:none;font-size:.95rem;padding:.35rem 0}
 nav.top a.nl:hover{color:var(--cobalt)}
@@ -127,11 +130,12 @@ svg.map a:focus{outline:none}
 @media (max-width:640px){
   .swipe{display:block}
   .map-wrap{padding:.6rem}
-  .map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  svg.map{min-width:680px}
-  svg.map .m-region{font-size:17px}
-  svg.map .m-note,svg.map .m-minor text,svg.map .m-peak text,svg.map .m-stop .s{font-size:15px}
-  svg.map .m-stop .l{font-size:18px}
+  svg.map{width:100%;height:auto}
+  svg.map .m-region{font-size:20px}
+  svg.map .m-note,svg.map .m-minor text,svg.map .m-peak text{font-size:18px}
+  svg.map .m-stop .s{font-size:17px;transform:translateY(7px)}
+  svg.map .m-stop .l{font-size:24px}
+  svg.map .m-pudong{transform:translateY(9px)}
 }
 
 /* Route strip */
@@ -161,14 +165,16 @@ button.cn-copy.done .cn-hint{color:var(--celadon)}
 button.cn-copy:hover .han{border-bottom-style:solid}
 .weblink{white-space:nowrap}
 
-button@media (max-width:640px){
+@media (max-width:640px){
   .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
   .tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .tbl{border-top-width:1px}
   .tbl tr{padding:.75rem 0;border-bottom:1px solid var(--rule)}
-  .tbl td{border:0;padding:.15rem 0;display:grid;grid-template-columns:6.5rem 1fr;gap:.75rem}
-  .tbl td::before{content:attr(data-label);font-size:.82rem;color:var(--muted);padding-top:.15rem}
-  .tbl td.lead{grid-template-columns:1fr;font-weight:600;padding-bottom:.35rem}
+  .tbl td{border:0;padding:.2rem 0 .2rem 7.25rem;position:relative}
+  .tbl td::before{content:attr(data-label);position:absolute;left:0;top:.3rem;width:6.5rem;font-size:.82rem;color:var(--muted)}
+  .tbl td.lead{padding:0 0 .35rem;font-weight:600}
+  .tbl td.lead > .han{display:inline}
+  .tbl .t{white-space:normal}
   .tbl td.lead::before{content:none}
   .tbl td.lead .han{font-weight:500}
 }
@@ -284,7 +290,7 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
     <p class="lede">One loop inland and back to the coast. Tap a city on the map to jump to that part of the trip.</p>
 
     <figure class="map-wrap">
-      <p class="swipe note">Swipe sideways to see the whole route.</p>
+      <p class="swipe note">Pinch to zoom in on the map.</p>
       <div class="map-scroll">
 <svg class="map" viewBox="55 40 765 412" aria-labelledby="mapTitle mapDesc">
   <title id="mapTitle">Trip route map</title>
@@ -337,7 +343,7 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
     <circle cx="509" cy="237" r="4"/><text x="500" y="226" text-anchor="end">Hangzhou East</text>
     <a href="#day-3" aria-label="Day 3: Zhuji pearl farm"><circle cx="513" cy="323" r="4"/><text x="522" y="344">Zhuji pearls</text></a>
     <a href="#day-6" aria-label="Day 6: Hongcun"><circle cx="221" cy="280" r="4"/><text x="212" y="272" text-anchor="end">Hongcun</text></a>
-    <circle cx="715" cy="108" r="4"/><text x="723" y="98">Pudong</text>
+    <circle cx="715" cy="108" r="4"/><text class="m-pudong" x="723" y="98">Pudong</text>
   </g>
 
   <!-- Huangshan peak -->
