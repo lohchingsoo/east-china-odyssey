@@ -22,4 +22,4 @@
 
 The page asks search engines not to list it, but anyone with the link can open it. Share it only with the group.
 
-Itinerary details come from the organiser and may change. The organiser's latest message wins.
+Prepared on a best-effort basis, based on the organiser's documents. Please follow the organiser's latest updates if anything differs.
