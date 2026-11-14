@@ -160,7 +160,7 @@ svg.map a:focus{outline:none}
 .tbl .t{white-space:nowrap;font-variant-numeric:tabular-nums}
 button.cn-copy{display:block;font:inherit;background:none;border:0;padding:.15rem 0 0;margin:0;text-align:left;cursor:pointer;color:var(--cobalt)}
 button.cn-copy .han{display:inline;font-size:1rem;border-bottom:1px dotted currentColor}
-button.cn-copy .cn-hint{display:block;font-family:var(--serif);font-size:.78rem;color:var(--muted);margin-top:.1rem}
+button.cn-copy .cn-hint{display:inline;font-family:var(--serif);font-size:.82rem;color:var(--muted);margin-left:.5rem}
 button.cn-copy.done .cn-hint{color:var(--celadon)}
 button.cn-copy:hover .han{border-bottom-style:solid}
 .weblink{white-space:nowrap}
@@ -206,8 +206,8 @@ button.cn-copy:hover .han{border-bottom-style:solid}
 @media (max-width:900px){.grid2{grid-template-columns:1fr}}
 .callout{border:1.5px solid var(--seal);border-radius:6px;padding:1rem 1.2rem;margin:0 0 2rem;background:var(--surface)}
 .callout h3{margin-top:0;color:var(--seal)}
-.daily{border:1.5px solid var(--celadon);border-radius:6px;padding:1rem 1.2rem;margin:0 0 2rem;background:var(--surface)}
-.daily h3{margin-top:0;color:var(--celadon)}
+.daily{border:1.5px solid var(--seal);border-radius:6px;padding:1rem 1.2rem;margin:0 0 2rem;background:var(--surface)}
+.daily h3{margin-top:0;color:var(--seal)}
 
 /* Checklist */
 .check{list-style:none;padding:0;margin:0 0 1rem}
@@ -378,36 +378,35 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
     </ol>
 
     <h3>Hotels</h3>
-    <p class="note">Show the Chinese name to drivers. Tap a Chinese name to copy it, then paste it into <a href="#amap">AMap Global</a> or a taxi app.</p>
     <table class="tbl">
       <thead><tr><th>Hotel</th><th>Nights</th><th>Address</th><th>Hotel page</th></tr></thead>
       <tbody>
         <tr>
-          <td class="lead">Dongyueli Hotel, Shaoxing<button type="button" class="cn-copy" data-copy="冬悦里·府山枕水度假酒店"><span class="han">冬悦里·府山枕水度假酒店</span><span class="cn-hint">Tap to copy</span></button></td>
+          <td class="lead">Dongyueli Hotel, Shaoxing<button type="button" class="cn-copy" data-copy="冬悦里·府山枕水度假酒店"><span class="han">冬悦里·府山枕水度假酒店</span><span class="cn-hint" aria-live="polite"></span></button></td>
           <td data-label="Nights" class="t">15-17 Nov (3)</td>
           <td data-label="Address">No. 20 Longshan Back Street, Yuecheng District, Shaoxing<br><span class="nowrap">+86 575 8799 6666</span></td>
           <td data-label="Hotel page"><a class="weblink" href="https://uk.trip.com/hotels/shaoxing-hotel-detail-102859697/dongyueli-hotel" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Xihai Hotel, South Wing (mountaintop)<button type="button" class="cn-copy" data-copy="黄山西海饭店"><span class="han">黄山西海饭店</span><span class="cn-hint">Tap to copy</span></button></td>
+          <td class="lead">Xihai Hotel, South Wing (mountaintop)<button type="button" class="cn-copy" data-copy="黄山西海饭店"><span class="han">黄山西海饭店</span><span class="cn-hint" aria-live="polite"></span></button></td>
           <td data-label="Nights" class="t">18 Nov (1)</td>
           <td data-label="Address">Xihai Scenic Area, Huangshan District, Huangshan, Anhui 242700</td>
           <td data-label="Hotel page"><a class="weblink" href="https://za.hotels.com/ho1057516416/xihai-hotel-huangshan-china" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Crowne Plaza Huangshan Yucheng<button type="button" class="cn-copy" data-copy="黄山昱城皇冠假日酒店"><span class="han">黄山昱城皇冠假日酒店</span><span class="cn-hint">Tap to copy</span></button></td>
+          <td class="lead">Crowne Plaza Huangshan Yucheng<button type="button" class="cn-copy" data-copy="黄山昱城皇冠假日酒店"><span class="han">黄山昱城皇冠假日酒店</span><span class="cn-hint" aria-live="polite"></span></button></td>
           <td data-label="Nights" class="t">19 Nov (1)</td>
           <td data-label="Address">No. 1 Huizhou Road, Tunxi, Huangshan, Anhui 245000<br><span class="nowrap">+86 559 259 1888</span></td>
           <td data-label="Hotel page"><a class="weblink" href="https://www.ihg.com/crowneplaza/hotels/us/en/huangshan/txncp/hoteldetail" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Hyatt Place Jingdezhen Taoxichuan<button type="button" class="cn-copy" data-copy="景德镇陶溪川凯悦嘉轩酒店"><span class="han">景德镇陶溪川凯悦嘉轩酒店</span><span class="cn-hint">Tap to copy</span></button></td>
+          <td class="lead">Hyatt Place Jingdezhen Taoxichuan<button type="button" class="cn-copy" data-copy="景德镇陶溪川凯悦嘉轩酒店"><span class="han">景德镇陶溪川凯悦嘉轩酒店</span><span class="cn-hint" aria-live="polite"></span></button></td>
           <td data-label="Nights" class="t">20-23 Nov (4)</td>
           <td data-label="Address">Building 2, Phase II Taoxichuan, Zhushan Avenue &amp; Taoxichuan South Road, Jingdezhen, Jiangxi 333000<br><span class="nowrap">+86 798 873 3666</span></td>
           <td data-label="Hotel page"><a class="weblink" href="https://www.hyatt.com/hyatt-place/en-US/jdzzj-hyatt-place-jingdezhen-taoxichuan" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
         </tr>
         <tr>
-          <td class="lead">Renaissance Shanghai Yu Garden<button type="button" class="cn-copy" data-copy="上海豫园万丽酒店"><span class="han">上海豫园万丽酒店</span><span class="cn-hint">Tap to copy</span></button></td>
+          <td class="lead">Renaissance Shanghai Yu Garden<button type="button" class="cn-copy" data-copy="上海豫园万丽酒店"><span class="han">上海豫园万丽酒店</span><span class="cn-hint" aria-live="polite"></span></button></td>
           <td data-label="Nights" class="t">24-25 Nov (2)</td>
           <td data-label="Address">No. 159 Henan South Road, Huangpu District, Shanghai 200010<br><span class="nowrap">+86 21 2321 8888</span></td>
           <td data-label="Hotel page"><a class="weblink" href="https://www.marriott.com/en-us/hotels/shasy-renaissance-shanghai-yu-garden-hotel/overview/" target="_blank" rel="noopener noreferrer">Website<span class="sr-only"> (opens in a new tab)</span></a></td>
@@ -422,8 +421,8 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       <tbody>
         <tr><td class="lead">Day 1: Singapore - Shanghai Pudong</td><td data-label="Transport">Flight SQ830</td><td data-label="Departs" class="t">Sun 15, 09:20</td><td data-label="Arrives" class="t">14:35</td><td data-label="Duration" class="t">5 h 15 min</td></tr>
         <tr><td class="lead">Day 1: Pudong Airport - Shaoxing</td><td data-label="Transport">Coach with guide, 220 km</td><td data-label="Departs" class="t">Sun 15, 15:45</td><td data-label="Arrives" class="t">~18:45</td><td data-label="Duration" class="t">~3 h</td></tr>
-        <tr><td class="lead">Day 4: Shaoxing - Hangzhou East Station <button type="button" class="cn-copy" data-copy="杭州东站"><span class="han">杭州东站</span><span class="cn-hint">Tap to copy</span></button></td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Wed 18, TBC</td><td data-label="Arrives" class="t">Before 10:34</td><td data-label="Duration" class="t">~1 h</td></tr>
-        <tr><td class="lead">Day 4: Hangzhou East - Huangshan North <button type="button" class="cn-copy" data-copy="黄山北站"><span class="han">黄山北站</span><span class="cn-hint">Tap to copy</span></button></td><td data-label="Transport">Train G7313, first class</td><td data-label="Departs" class="t">Wed 18, 10:34</td><td data-label="Arrives" class="t">12:02</td><td data-label="Duration" class="t">1 h 28 min</td></tr>
+        <tr><td class="lead">Day 4: Shaoxing - Hangzhou East Station <button type="button" class="cn-copy" data-copy="杭州东站"><span class="han">杭州东站</span><span class="cn-hint" aria-live="polite"></span></button></td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Wed 18, TBC</td><td data-label="Arrives" class="t">Before 10:34</td><td data-label="Duration" class="t">~1 h</td></tr>
+        <tr><td class="lead">Day 4: Hangzhou East - Huangshan North <button type="button" class="cn-copy" data-copy="黄山北站"><span class="han">黄山北站</span><span class="cn-hint" aria-live="polite"></span></button></td><td data-label="Transport">Train G7313, first class</td><td data-label="Departs" class="t">Wed 18, 10:34</td><td data-label="Arrives" class="t">12:02</td><td data-label="Duration" class="t">1 h 28 min</td></tr>
         <tr><td class="lead">Day 4: South Gate - Yungu cable car - Xihai Hotel</td><td data-label="Transport">Shuttle bus, cable car, walk</td><td data-label="Departs" class="t">Wed 18, after lunch</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">~2 h 30 min</td></tr>
         <tr><td class="lead">Day 5: Xihai Hotel - Huangshan city</td><td data-label="Transport">Yungu cable car, then coach</td><td data-label="Departs" class="t">Thu 19, TBC</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">TBC</td></tr>
         <tr><td class="lead">Day 6: Hongcun - Jingdezhen</td><td data-label="Transport">Coach</td><td data-label="Departs" class="t">Fri 20, TBC</td><td data-label="Arrives" class="t">TBC</td><td data-label="Duration" class="t">~2 h 30 min</td></tr>
@@ -743,9 +742,8 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
         <li><b>Entry.</b> Singapore ordinary passports: visa-free for up to 30 days (<a href="https://www.ica.gov.sg/about-ica/news-and-publications/media-room/mutual-30-day-visa-exemption-arrangement-between-singapore-and-the-people-s-republic-of-china" target="_blank" rel="noopener noreferrer">ICA<span class="sr-only"> (opens in a new tab)</span></a>). Many European passports, including French, are also visa-free for 30 days until 31 December 2026 (<a href="https://fj.gov.cn/english/services/visas/202511/t20251105_7030611.htm" target="_blank" rel="noopener noreferrer">Fujian Provincial Government, reporting China Daily<span class="sr-only"> (opens in a new tab)</span></a>). <b>Everyone should confirm the rules for their own passport.</b></li>
         <li><b>China arrival card</b> online from 72 hours before departure, so from Thu 12 Nov, 09:20 (<a href="https://s.nia.gov.cn/ArrivalCardFillingPC/" target="_blank" rel="noopener noreferrer">National Immigration Administration<span class="sr-only"> (opens in a new tab)</span></a>).</li>
         <li><b>Alipay</b> installed, identity verified and an international card linked. Test it before you go.</li>
-        <li id="amap"><b>AMap Global</b> (高德地图) installed from the App Store or Google Play. It has had an English version since January 2025, and later added 14 more languages including French and Malay (<a href="https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250711/8f2fcf3c6b624a56a6b2c0d8152ea2f2.html" target="_blank" rel="noopener noreferrer">Shanghai Government<span class="sr-only"> (opens in a new tab)</span></a>; <a href="https://english.shanghai.gov.cn/en-UsefulApps/20241213/59a549d4bdf1440c8e86251d5ac7d5a9.html" target="_blank" rel="noopener noreferrer">how to use it<span class="sr-only"> (opens in a new tab)</span></a>). Paste a hotel's Chinese name into its search box for directions and taxi booking.</li>
+        <li id="amap"><b>AMap Global</b> (高德地图): install from the App Store or Google Play. It has had an English version since January 2025 (<a href="https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250711/8f2fcf3c6b624a56a6b2c0d8152ea2f2.html" target="_blank" rel="noopener noreferrer">Shanghai Government<span class="sr-only"> (opens in a new tab)</span></a>).</li>
         <li><b>Travel insurance</b> covering medical costs, emergency help and trip interruption.</li>
-        <li><b>Save this page</b> on your phone before you fly (Share, then Print, then Save as PDF, or "Add to Home Screen"). Some sites can be slow or unreachable on hotel Wi-Fi in China.</li>
       </ul>
     </div>
 
