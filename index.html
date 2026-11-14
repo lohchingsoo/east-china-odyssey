@@ -57,6 +57,7 @@ img,svg{max-width:100%}
 nav.top{background:var(--paper);background:color-mix(in srgb,var(--paper) 92%,transparent);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
 nav.top .inner{max-width:66rem;margin:0 auto;display:flex;align-items:center;gap:1.25rem;padding:.65rem 1.25rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 nav.top .inner::-webkit-scrollbar{display:none}
+@media (min-width:760px){nav.top .inner{justify-content:center}}
 @media (max-width:1024px){nav.top .inner{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:2.5rem}}
 img,svg,table,pre{max-width:100%}
 .refs a,.refs li{overflow-wrap:anywhere}
