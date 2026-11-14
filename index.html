@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>East China Odyssey - Pearls, Peaks &amp; Porcelain, 15-26 November 2026</title>
 <meta name="description" content="Trip briefing for the East China Odyssey group: route map, itinerary, hotels, background reading and practical tips for Shaoxing, Huangshan, Jingdezhen and Shanghai.">
 <meta name="robots" content="noindex, nofollow">
@@ -995,22 +995,6 @@ footer{padding:3rem 0 4rem;color:var(--muted);font-size:.9rem;border-top:1px sol
       if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done, fallback); } else { fallback(); }
     });
   });
-})();
-</script>
-<script>
-/* Ask the browser to redraw at the new width after the device is turned (works around a Chrome on iPad fault). */
-(function () {
-  var m = document.querySelector('meta[name="viewport"]');
-  if (!m) return;
-  var base = m.getAttribute("content");
-  function refit() {
-    m.setAttribute("content", base + ", maximum-scale=1");
-    setTimeout(function () { m.setAttribute("content", base); }, 400);
-  }
-  window.addEventListener("orientationchange", refit);
-  if (screen.orientation && screen.orientation.addEventListener) {
-    screen.orientation.addEventListener("change", refit);
-  }
 })();
 </script>
 </body>
